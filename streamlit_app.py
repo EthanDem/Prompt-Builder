@@ -30,7 +30,7 @@ goal = st.text_input("Goal", value="", help="Replace [GOAL]")
 markup = st.text_input("Markup", value="", help="Replace [MARKUP]")
 user_prompt = st.text_input("User Prompt", value="", help="Replace [USER PROMPT]")
 
-if st.button("Generate Text"):
+if st.button("Generate Prompt"):
     # Replace placeholders with user input
     updated_text = original_text.replace("[EXPERT DETAILS]", expert_details)
     updated_text = updated_text.replace("[COMPANY/PERSON NAME]", company_name)
@@ -41,6 +41,6 @@ if st.button("Generate Text"):
     updated_text = updated_text.replace("[MARKUP]", markup)
     updated_text = updated_text.replace("[USER PROMPT]", user_prompt)
     
-    st.subheader("Updated Text")
+    st.subheader("Prompt")
     st.write(updated_text)
 
