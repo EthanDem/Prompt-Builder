@@ -2,7 +2,7 @@ import streamlit as st
 import json
 
 # Read in the JSON data
-with open('prompt_builder_templates.json', 'r') as f:
+with open('/mount/src/prompt-builder/prompt_builder_templates.json', 'r') as f:
     templates = json.load(f)
 
 # Extract the templates for each category
