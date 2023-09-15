@@ -5,40 +5,31 @@ import json
 with open('/mount/src/prompt-builder/prompt_builder_templates.json', 'r') as f:
     templates = json.load(f)
 
-# Extract the templates for each category
-expert_details_templates = [item['name'] for item in templates.get('EXPERTS', [])]
-needed_output_templates = [item['name'] for item in templates.get('NEEDED OUTPUT', [])]
-writing_style_templates = [item['name'] for item in templates.get('WRITING STYLE', [])]
-point_of_view_templates = [item['name'] for item in templates.get('Point of View', [])]
-goal_templates = [item['name'] for item in templates.get('Goal', [])]
-markup_templates = [item['name'] for item in templates.get('Markup', [])]
-
+# Create mappings from name to prompt for each category
+expert_details_map = {item['name']: item['prompt'] for item in templates.get('EXPERTS', [])}
+needed_output_map = {item['name']: item['prompt'] for item in templates.get('NEEDED OUTPUT', [])}
+writing_style_map = {item['name']: item['prompt'] for item in templates.get('WRITING STYLE', [])}
+point_of_view_map = {item['name']: item['prompt'] for item in templates.get('Point of View', [])}
+goal_map = {item['name']: item['prompt'] for item in templates.get('Goal', [])}
+markup_map = {item['name']: item['prompt'] for item in templates.get('Markup', [])}
 
 st.sidebar.title("Templates")
 
-selected_expert = st.sidebar.selectbox("Expert Details Templates", [""] + expert_details_templates, key="expert")
-
-selected_output = st.sidebar.selectbox("Needed Output Templates", [""] + needed_output_templates, key="output")
-
-selected_style = st.sidebar.selectbox("Writing Style Templates", [""] + writing_style_templates, key="style")
-
-selected_pov = st.sidebar.selectbox("Point Of View Templates", [""] + point_of_view_templates, key="pov")
-
-selected_goal = st.sidebar.selectbox("Goal Templates", [""] + goal_templates, key="goal")
-
-selected_markup = st.sidebar.selectbox("Markup Templates", [""] + markup_templates, key="markup")
-
-
+selected_expert = st.sidebar.selectbox("Expert Details Templates", [""] + list(expert_details_map.keys()), key="expert")
+selected_output = st.sidebar.selectbox("Needed Output Templates", [""] + list(needed_output_map.keys()), key="output")
+selected_style = st.sidebar.selectbox("Writing Style Templates", [""] + list(writing_style_map.keys()), key="style")
+selected_pov = st.sidebar.selectbox("Point Of View Templates", [""] + list(point_of_view_map.keys()), key="pov")
+selected_goal = st.sidebar.selectbox("Goal Templates", [""] + list(goal_map.keys()), key="goal")
+selected_markup = st.sidebar.selectbox("Markup Templates", [""] + list(markup_map.keys()), key="markup")
 
 st.title("Prompt Builder GUI")
 
-expert_details = st.text_input("Expert Details", value=selected_expert)
-company_name = st.text_input("Company/Person Name", value="")
-needed_output = st.text_input("Needed Output", value=selected_output)
-writing_style = st.text_input("Writing Style", value=selected_style)
-point_of_view = st.text_input("Point of View", value=selected_pov)
-goal = st.text_input("Goal", value=selected_goal)
-markup = st.text_input("Markup", value=selected_markup)
+expert_details = st.text_input("Expert Details", value=expert_details_map.get(selected_expert, ""))
+needed_output = st.text_input("Needed Output", value=needed_output_map.get(selected_output, ""))
+writing_style = st.text_input("Writing Style", value=writing_style_map.get(selected_style, ""))
+point_of_view = st.text_input("Point of View", value=point_of_view_map.get(selected_pov, ""))
+goal = st.text_input("Goal", value=goal_map.get(selected_goal, ""))
+markup = st.text_input("Markup", value=markup_map.get(selected_markup, ""))
 
 original_text = '''You are [EXPERT DETAILS]. You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT].
 You are to write from the point of view of [POINT OF VIEW]. The overall goal of this output is [GOAL].
