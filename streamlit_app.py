@@ -19,7 +19,7 @@ Ok, that is the base instructions, now follow these details and create an output
 USER PROMPT= [USER PROMPT]
 '''
 
-st.title("Text Placeholder Replacer")
+st.title("Prompt Builder GUI")
 
 expert_details = st.text_input("Expert Details", value="", help="Replace [EXPERT DETAILS]")
 company_name = st.text_input("Company/Person Name", value="", help="Replace [COMPANY/PERSON NAME]")
