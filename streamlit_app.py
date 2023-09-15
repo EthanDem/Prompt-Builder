@@ -1,5 +1,31 @@
 import streamlit as st
 
+expert_details_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
+needed_output_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
+point_of_view_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
+goal_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
+markup_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
+writing_style_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
+
+st.sidebar.title("Templates")
+
+selected_expert = st.sidebar.selectbox("", expert_details_templates, key="expert")
+selected_output = st.sidebar.selectbox("", needed_output_templates, key="output")
+selected_pov = st.sidebar.selectbox("", point_of_view_templates, key="pov")
+selected_goal = st.sidebar.selectbox("", goal_templates, key="goal")
+selected_markup = st.sidebar.selectbox("", markup_templates, key="markup")
+selected_style = st.sidebar.selectbox("", writing_style_templates, key="style")
+
+st.title("Prompt Builder GUI")
+
+expert_details = st.text_input("Expert Details", value=selected_expert)
+company_name = st.text_input("Company/Person Name", value="")
+needed_output = st.text_input("Needed Output", value=selected_output)
+writing_style = st.text_input("Writing Style", value=selected_style)
+point_of_view = st.text_input("Point of View", value=selected_pov)
+goal = st.text_input("Goal", value=selected_goal)
+markup = st.text_input("Markup", value=selected_markup)
+
 original_text = '''You are [EXPERT DETAILS]. You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT].
 You are to write from the point of view of [POINT OF VIEW]. The overall goal of this output is [GOAL].
 In order to provide a perfect and complete output, access any and all information you have access,
@@ -16,21 +42,10 @@ Please follow the following formatting requirements:
 3.) WRITING STYLE= [WRITING STYLE]
 
 Ok, that is the base instructions, now follow these details and create an output described provided here:
-USER PROMPT=
+USER PROMPT= 
 '''
 
-st.title("Prompt Builder GUI")
-
-expert_details = st.text_input("Expert Details", value="", help="Replace [EXPERT DETAILS]")
-company_name = st.text_input("Company/Person Name", value="", help="Replace [COMPANY/PERSON NAME]")
-needed_output = st.text_input("Needed Output", value="", help="Replace [NEEDED OUTPUT]")
-writing_style = st.text_input("Writing Style", value="", help="Replace [WRITING STYLE]")
-point_of_view = st.text_input("Point of View", value="", help="Replace [POINT OF VIEW]")
-goal = st.text_input("Goal", value="", help="Replace [GOAL]")
-markup = st.text_input("Markup", value="", help="Replace [MARKUP]")
-
 if st.button("Generate Prompt"):
-    # Replace placeholders with user input
     updated_text = original_text.replace("[EXPERT DETAILS]", expert_details)
     updated_text = updated_text.replace("[COMPANY/PERSON NAME]", company_name)
     updated_text = updated_text.replace("[NEEDED OUTPUT]", needed_output)
@@ -41,4 +56,3 @@ if st.button("Generate Prompt"):
     
     st.subheader("Prompt")
     st.write(updated_text)
-
