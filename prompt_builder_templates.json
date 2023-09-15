@@ -1,10 +1,6 @@
 {
     "NEEDED OUTPUT": [
         {
-            "name": "Name",
-            "prompt": "Prompt"
-        },
-        {
             "name": "Ad Copy",
             "prompt": "Create compelling ad copy for our new campaign targeting young professionals."
         },
