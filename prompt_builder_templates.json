@@ -51,10 +51,6 @@
     ],
     "WRITING STYLE": [
         {
-            "name": "Name",
-            "prompt": "Prompt"
-        },
-        {
             "name": "B2B Sales Style",
             "prompt": "Write persuasively, focusing on the value proposition and benefits to the business. Use industry jargon when appropriate and highlight ROI."
         },
@@ -84,10 +80,6 @@
         }
     ],
     "Markup": [
-        {
-            "name": "Name",
-            "prompt": "Prompt"
-        },
         {
             "name": "Article",
             "prompt": "Write a detailed piece between 600-1000 words. Structure it with an engaging introduction, 3-5 main points or sections with headers, supporting content for each section, and a conclusion summarizing the main points. Include relevant citations if necessary."
@@ -122,10 +114,6 @@
         }
     ],
     "Goal": [
-        {
-            "name": "Name",
-            "prompt": "Prompt"
-        },
         {
             "name": "Brand Awareness",
             "prompt": "Your goal is to emphasize your brand values, unique features, and vision in a memorable manner. Look to create an emotional connection with the reader and incorporate brand stories or community milestones for a deeper impact."
@@ -168,10 +156,6 @@
         }
     ],
     "Point of View": [
-        {
-            "name": "Name",
-            "prompt": "Prompt"
-        },
         {
             "name": "1st Person Singular",
             "prompt": "Write from the perspective of an individual, using pronouns like \"I\", \"me\", \"my\", and \"mine\". The narrator is a character within the story or context, sharing personal experiences and feelings."
