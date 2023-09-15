@@ -24,7 +24,7 @@ selected_goal = st.sidebar.selectbox("Goal Templates", [""] + list(goal_map.keys
 selected_markup = st.sidebar.selectbox("Markup Templates", [""] + list(markup_map.keys()), key="markup")
 
 st.title("Prompt Builder GUI")
-company_name = st.text_input("Company/Person Name", value="")  # Add this line back in
+company_name = st.text_input("Company/Person Name")
 expert_details = st.text_input("Expert Details", value=expert_details_map.get(selected_expert, ""))
 needed_output = st.text_input("Needed Output", value=needed_output_map.get(selected_output, ""))
 writing_style = st.text_input("Writing Style", value=writing_style_map.get(selected_style, ""))
