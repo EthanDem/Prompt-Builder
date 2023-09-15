@@ -9,12 +9,12 @@ writing_style_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
 
 st.sidebar.title("Templates")
 
-selected_expert = st.sidebar.selectbox("", expert_details_templates, key="expert")
-selected_output = st.sidebar.selectbox("", needed_output_templates, key="output")
-selected_pov = st.sidebar.selectbox("", point_of_view_templates, key="pov")
-selected_goal = st.sidebar.selectbox("", goal_templates, key="goal")
-selected_markup = st.sidebar.selectbox("", markup_templates, key="markup")
-selected_style = st.sidebar.selectbox("", writing_style_templates, key="style")
+selected_expert = st.sidebar.selectbox("Expert Details Templates", expert_details_templates, key="expert")
+selected_output = st.sidebar.selectbox("Needed Output Templates", needed_output_templates, key="output")
+selected_pov = st.sidebar.selectbox("Point Of View Templates", point_of_view_templates, key="pov")
+selected_goal = st.sidebar.selectbox("Goal Templates", goal_templates, key="goal")
+selected_markup = st.sidebar.selectbox("Markup Templates", markup_templates, key="markup")
+selected_style = st.sidebar.selectbox("Writing Style Templates", writing_style_templates, key="style")
 
 st.title("Prompt Builder GUI")
 
@@ -25,6 +25,7 @@ writing_style = st.text_input("Writing Style", value=selected_style)
 point_of_view = st.text_input("Point of View", value=selected_pov)
 goal = st.text_input("Goal", value=selected_goal)
 markup = st.text_input("Markup", value=selected_markup)
+user_prompt = st.text_input("User Prompt", value="")
 
 original_text = '''You are [EXPERT DETAILS]. You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT].
 You are to write from the point of view of [POINT OF VIEW]. The overall goal of this output is [GOAL].
@@ -53,6 +54,7 @@ if st.button("Generate Prompt"):
     updated_text = updated_text.replace("[POINT OF VIEW]", point_of_view)
     updated_text = updated_text.replace("[GOAL]", goal)
     updated_text = updated_text.replace("[MARKUP]", markup)
+    updated_text = updated_text.replace("[USER PROMPT]", user_prompt)
     
     st.subheader("Prompt")
     st.write(updated_text)
