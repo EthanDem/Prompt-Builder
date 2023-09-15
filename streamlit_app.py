@@ -16,7 +16,7 @@ Please follow the following formatting requirements:
 3.) WRITING STYLE= [WRITING STYLE]
 
 Ok, that is the base instructions, now follow these details and create an output described provided here:
-USER PROMPT= [USER PROMPT]
+USER PROMPT=
 '''
 
 st.title("Prompt Builder GUI")
@@ -28,7 +28,6 @@ writing_style = st.text_input("Writing Style", value="", help="Replace [WRITING 
 point_of_view = st.text_input("Point of View", value="", help="Replace [POINT OF VIEW]")
 goal = st.text_input("Goal", value="", help="Replace [GOAL]")
 markup = st.text_input("Markup", value="", help="Replace [MARKUP]")
-user_prompt = st.text_input("User Prompt", value="", help="Replace [USER PROMPT]")
 
 if st.button("Generate Prompt"):
     # Replace placeholders with user input
@@ -39,7 +38,6 @@ if st.button("Generate Prompt"):
     updated_text = updated_text.replace("[POINT OF VIEW]", point_of_view)
     updated_text = updated_text.replace("[GOAL]", goal)
     updated_text = updated_text.replace("[MARKUP]", markup)
-    updated_text = updated_text.replace("[USER PROMPT]", user_prompt)
     
     st.subheader("Prompt")
     st.write(updated_text)
