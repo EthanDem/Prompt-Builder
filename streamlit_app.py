@@ -11,11 +11,18 @@ writing_style_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
 st.sidebar.title("Templates")
 
 selected_expert = st.sidebar.selectbox("Expert Details Templates", [""] + expert_details_templates, key="expert")
+
 selected_output = st.sidebar.selectbox("Needed Output Templates", [""] + needed_output_templates, key="output")
-selected_pov = st.sidebar.selectbox("Point Of View Templates", [""] + point_of_view_templates, key="pov")
-selected_goal = st.sidebar.selectbox("Goal Templates", [""] + goal_templates, key="goal")
-selected_markup = st.sidebar.selectbox("Markup Templates", [""] + markup_templates, key="markup")
+
 selected_style = st.sidebar.selectbox("Writing Style Templates", [""] + writing_style_templates, key="style")
+
+selected_pov = st.sidebar.selectbox("Point Of View Templates", [""] + point_of_view_templates, key="pov")
+
+selected_goal = st.sidebar.selectbox("Goal Templates", [""] + goal_templates, key="goal")
+
+selected_markup = st.sidebar.selectbox("Markup Templates", [""] + markup_templates, key="markup")
+
+
 
 st.title("Prompt Builder GUI")
 
