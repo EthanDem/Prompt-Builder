@@ -1,11 +1,17 @@
 import streamlit as st
+import json
 
-expert_details_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
-needed_output_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
-point_of_view_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
-goal_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
-markup_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
-writing_style_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
+# Read in the JSON data
+with open('prompt_builder_templates.json', 'r') as f:
+    templates = json.load(f)
+
+# Extract the templates for each category
+expert_details_templates = [item['prompt'] for item in templates.get('EXPERTS', [])]
+needed_output_templates = [item['prompt'] for item in templates.get('NEEDED OUTPUT', [])]
+writing_style_templates = [item['prompt'] for item in templates.get('WRITING STYLE', [])]
+point_of_view_templates = [item['prompt'] for item in templates.get('Point of View', [])]
+goal_templates = [item['prompt'] for item in templates.get('Goal', [])]
+markup_templates = [item['prompt'] for item in templates.get('Markup', [])]
 
 
 st.sidebar.title("Templates")
