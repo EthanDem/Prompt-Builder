@@ -31,7 +31,7 @@ point_of_view = st.text_input("Point of View", value=point_of_view_map.get(selec
 goal = st.text_input("Goal", value=goal_map.get(selected_goal, ""))
 markup = st.text_input("Markup", value=markup_map.get(selected_markup, ""))
 
-original_text = '''You are [EXPERT DETAILS]. You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT].
+original_text = '''[EXPERT DETAILS]. You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT].
 You are to write from the point of view of [POINT OF VIEW]. The overall goal of this output is [GOAL].
 In order to provide a perfect and complete output, access any and all information you have access,
 which includes: files and content stored in your database, attachments provided if any,
