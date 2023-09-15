@@ -1,14 +1,13 @@
 import streamlit as st
 
-# Templates for the sidebar
-expert_details_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
-needed_output_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
-point_of_view_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
-goal_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
-markup_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
-writing_style_templates = ["EXAMPLE 1", "EXAMPLE 2", "EXAMPLE 3"]
+expert_details_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
+needed_output_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
+point_of_view_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
+goal_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
+markup_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
+writing_style_templates = ["<<EXAMPLE1>>", "<<EXAMPLE2>>", "<<EXAMPLE3>>"]
 
-# Sidebar with template selection
+
 st.sidebar.title("Templates")
 
 selected_expert = st.sidebar.selectbox("Expert Details Templates", [""] + expert_details_templates, key="expert")
@@ -18,7 +17,6 @@ selected_goal = st.sidebar.selectbox("Goal Templates", [""] + goal_templates, ke
 selected_markup = st.sidebar.selectbox("Markup Templates", [""] + markup_templates, key="markup")
 selected_style = st.sidebar.selectbox("Writing Style Templates", [""] + writing_style_templates, key="style")
 
-# Main content
 st.title("Prompt Builder GUI")
 
 expert_details = st.text_input("Expert Details", value=selected_expert)
@@ -29,13 +27,24 @@ point_of_view = st.text_input("Point of View", value=selected_pov)
 goal = st.text_input("Goal", value=selected_goal)
 markup = st.text_input("Markup", value=selected_markup)
 
-# Original text with placeholders
 original_text = '''You are [EXPERT DETAILS]. You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT].
 You are to write from the point of view of [POINT OF VIEW]. The overall goal of this output is [GOAL].
-... (rest of the original text)
-'''
+In order to provide a perfect and complete output, access any and all information you have access,
+which includes: files and content stored in your database, attachments provided if any,
+as well as any content provided within this prompt. Your output needs to be complete and final
+when you provide the output as this will be sent directly to a user without me reviewing it
+so it should always be a completed output. Do not use inert tags or any placeholder text.
+If you feel there should be an area that requires a custom input or placeholder text,
+please write around the need. This needs to be an output ready for a user to see.
+Strictly adhere to the WRITING STYLE provided for tone, overall style of the content
+and capture the voice as much as you can.
+Please follow the following formatting requirements:
+2.) MARKUP - Please use the following Markup and Structure details for the output provided here: [MARKUP]
+3.) WRITING STYLE= [WRITING STYLE]
 
-# Generate prompt
+Ok, that is the base instructions, now follow these details and create an output described provided here:
+USER PROMPT= '''
+
 if st.button("Generate Prompt"):
     updated_text = original_text.replace("[EXPERT DETAILS]", expert_details)
     updated_text = updated_text.replace("[COMPANY/PERSON NAME]", company_name)
