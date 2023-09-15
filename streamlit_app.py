@@ -6,12 +6,12 @@ with open('/mount/src/prompt-builder/prompt_builder_templates.json', 'r') as f:
     templates = json.load(f)
 
 # Extract the templates for each category
-expert_details_templates = [item['prompt'] for item in templates.get('EXPERTS', [])]
-needed_output_templates = [item['prompt'] for item in templates.get('NEEDED OUTPUT', [])]
-writing_style_templates = [item['prompt'] for item in templates.get('WRITING STYLE', [])]
-point_of_view_templates = [item['prompt'] for item in templates.get('Point of View', [])]
-goal_templates = [item['prompt'] for item in templates.get('Goal', [])]
-markup_templates = [item['prompt'] for item in templates.get('Markup', [])]
+expert_details_templates = [item['name'] for item in templates.get('EXPERTS', [])]
+needed_output_templates = [item['name'] for item in templates.get('NEEDED OUTPUT', [])]
+writing_style_templates = [item['name'] for item in templates.get('WRITING STYLE', [])]
+point_of_view_templates = [item['name'] for item in templates.get('Point of View', [])]
+goal_templates = [item['name'] for item in templates.get('Goal', [])]
+markup_templates = [item['name'] for item in templates.get('Markup', [])]
 
 
 st.sidebar.title("Templates")
