@@ -1,0 +1,246 @@
+{
+    "NEEDED OUTPUT": [
+        {
+            "name": "Name",
+            "prompt": "Prompt"
+        },
+        {
+            "name": "Ad Copy",
+            "prompt": "Create compelling ad copy for our new campaign targeting young professionals."
+        },
+        {
+            "name": "Blog Post",
+            "prompt": "Write a blog post on a topic relevant to our industry or product."
+        },
+        {
+            "name": "Business Proposal",
+            "prompt": "Develop a business proposal for our intended collaboration with XYZ Company."
+        },
+        {
+            "name": "Contract Agreement",
+            "prompt": "Draft a contract agreement for our new supplier partnership."
+        },
+        {
+            "name": "Instructional Manual",
+            "prompt": "Design an instructional manual for our latest software update."
+        },
+        {
+            "name": "Market Analysis Report",
+            "prompt": "Conduct a market analysis on emerging trends in our sector for the next quarter."
+        },
+        {
+            "name": "Meeting Minutes",
+            "prompt": "Document the minutes from the recent board meeting, highlighting decisions made."
+        },
+        {
+            "name": "Monthly Newsletter",
+            "prompt": "Design the content for our monthly newsletter focusing on company updates."
+        },
+        {
+            "name": "Press Release",
+            "prompt": "Draft a press release announcing our latest product launch or company news."
+        },
+        {
+            "name": "Reply Email",
+            "prompt": "Reply to an email received from a prospect or client."
+        },
+        {
+            "name": "Sales Pitch",
+            "prompt": "Construct a sales pitch for our newest service offering to potential clients."
+        },
+        {
+            "name": "Social Post",
+            "prompt": "Craft a post for our social media channels promoting our latest CSR initiative."
+        }
+    ],
+    "WRITING STYLE": [
+        {
+            "name": "Name",
+            "prompt": "Prompt"
+        },
+        {
+            "name": "B2B Sales Style",
+            "prompt": "Write persuasively, focusing on the value proposition and benefits to the business. Use industry jargon when appropriate and highlight ROI."
+        },
+        {
+            "name": "Business Attorney",
+            "prompt": "Write with legal accuracy and formality. Use precise legal terminology, reference statutes or cases when appropriate, and maintain a structured format."
+        },
+        {
+            "name": "Formal Business Style",
+            "prompt": "Write in a structured and polished manner. Use complete sentences, avoid contractions, and employ a professional tone. Cite sources where applicable."
+        },
+        {
+            "name": "Friends/Close Network Tone",
+            "prompt": "Write casually and familiarly. Use colloquial expressions, personal anecdotes, and an informal structure. It's okay to use inside jokes or shared references.|"
+        },
+        {
+            "name": "Harvard MBA Consultant",
+            "prompt": "Write with analytical precision and confidence. Use industry-specific jargon, back assertions with data, and maintain a consultative tone."
+        },
+        {
+            "name": "Informal Business Style",
+            "prompt": "Write in a conversational tone. It's okay to use contractions and colloquialisms, but maintain clarity and purpose in your communication."
+        },
+        {
+            "name": "Social Media Influencer",
+            "prompt": "Write with enthusiasm and charisma. Use contemporary language, emojis, and hashtags. Keep it personal and relatable, often invoking direct engagement."
+        }
+    ],
+    "Markup": [
+        {
+            "name": "Name",
+            "prompt": "Prompt"
+        },
+        {
+            "name": "Article",
+            "prompt": "Write a detailed piece between 600-1000 words. Structure it with an engaging introduction, 3-5 main points or sections with headers, supporting content for each section, and a conclusion summarizing the main points. Include relevant citations if necessary."
+        },
+        {
+            "name": "Email Reply",
+            "prompt": "Begin with a courteous greeting addressing the recipient by name. Provide a concise response to the query or topic, organized in clear paragraphs. End with a sign-off and your name or signature. It should be between 50-300 words."
+        },
+        {
+            "name": "Idea List",
+            "prompt": "List down ideas in bullet points, ensuring clarity and relevance. Each point should be concise yet descriptive enough to convey the core idea. Aim for a list of 5-20 points, depending on the topic's breadth."
+        },
+        {
+            "name": "LinkedIn Update",
+            "prompt": "Write a professional update between 100-300 words. Begin with a hook or main point, followed by supporting details or context. If relevant, include a call to action or question to engage your audience. It should be suitable for a professional network."
+        },
+        {
+            "name": "Summary",
+            "prompt": "Provide a concise overview of the main topic or content, aiming for a length of 100-200 words. Capture the key points, ensuring clarity and coherence. Avoid excessive detail, focusing instead on the primary insights or takeaways."
+        },
+        {
+            "name": "Table/Structured",
+            "prompt": "Create a structured table with clear headers. The content should be organized into rows and columns, ensuring readability. Each cell should be concise and directly related to its respective header. If explanatory notes are required, include them below the table."
+        },
+        {
+            "name": "Tweet",
+            "prompt": "Craft a message that is concise and impactful, keeping it within 280 characters. Make it engaging and suitable for sharing. Include relevant hashtags or mentions."
+        },
+        {
+            "name": "Website Chat Response",
+            "prompt": "Start with a friendly greeting. Provide a direct response to the user's query, ensuring clarity and brevity. Aim for a length of 20-100 words. Make sure to sign off with a prompt offering further assistance if needed."
+        }
+    ],
+    "Goal": [
+        {
+            "name": "Name",
+            "prompt": "Prompt"
+        },
+        {
+            "name": "Brand Awareness",
+            "prompt": "Your goal is to emphasize your brand values, unique features, and vision in a memorable manner. Look to create an emotional connection with the reader and incorporate brand stories or community milestones for a deeper impact."
+        },
+        {
+            "name": "Click a Link",
+            "prompt": "Your goal is to craft content that persuades users to take immediate action, specifically clicking on a provided link. Ensure the link or call-to-action stands out, and emphasize benefits or urgency."
+        },
+        {
+            "name": "Drive Sales (B2B)",
+            "prompt": "Your goal is to write persuasively, focusing on the value proposition for businesses. Emphasize ROI, unique selling points, and growth opportunities, possibly incorporating testimonials or data-backed claims."
+        },
+        {
+            "name": "Educate",
+            "prompt": "Your goal is to present information in a comprehensive yet digestible manner. Break down complex topics into simpler sections and ensure that the reader walks away with new knowledge or skills."
+        },
+        {
+            "name": "Engage on Social Media",
+            "prompt": "Your goal is to craft relatable and shareable content that encourages social media engagement. Consider using prompts, questions, trending topics, or hashtags to boost interactions like comments, likes, or shares."
+        },
+        {
+            "name": "Gather Feedback",
+            "prompt": "Your goal is to encourage readers or customers to share their feedback. Write in a way that welcomes their thoughts, experiences, or suggestions, and emphasize the importance of their input for continuous improvement."
+        },
+        {
+            "name": "Information Dissemination",
+            "prompt": "Your goal is to deliver essential information clearly and concisely. Structure the content for easy understanding, highlighting key points or takeaways, and ensuring it's free from distractions."
+        },
+        {
+            "name": "Inspire or Motivate",
+            "prompt": "Your goal is to uplift and empower the reader. Share motivational stories, quotes, or transformative experiences that push them to take action or overcome personal challenges."
+        },
+        {
+            "name": "Make the Customer Happy",
+            "prompt": "Your goal is to write with empathy and understanding, prioritizing the customer's needs and feelings. Aim to exceed their expectations, reassuring them that their concerns are acknowledged and fostering a sense of trust and satisfaction."
+        },
+        {
+            "name": "Problem Solving",
+            "prompt": "Your goal is to provide clear, step-by-step solutions or recommendations. Address the root cause of issues and offer guidance, ending with reassurance or an offer for further assistance."
+        }
+    ],
+    "Point of View": [
+        {
+            "name": "Name",
+            "prompt": "Prompt"
+        },
+        {
+            "name": "1st Person Singular",
+            "prompt": "Write from the perspective of an individual, using pronouns like \"I\", \"me\", \"my\", and \"mine\". The narrator is a character within the story or context, sharing personal experiences and feelings."
+        },
+        {
+            "name": "1st Person Plural",
+            "prompt": "Write from the perspective of a group, using pronouns like \"we\", \"us\", and \"ours\". The narrative represents the collective experiences or opinions of a group."
+        },
+        {
+            "name": "3rd Person",
+            "prompt": "Write focusing on the perspective of one specific character, using pronouns like \"he\", \"she\", \"it\". The narrator only knows the thoughts and feelings of this specific character, not of others."
+        }
+    ],
+    "EXPERTS": [
+        {
+            "name": "Accountant",
+            "prompt": "You are a chartered accountant responsible for accurate financial reporting and compliance."
+        },
+        {
+            "name": "B2B Sales Consultant",
+            "prompt": "You are a B2B sales expert, familiar with long sales cycles and high-value contracts."
+        },
+        {
+            "name": "Corporate Lawyer",
+            "prompt": "You are a corporate lawyer ensuring company practices are legally sound and advising on contracts."
+        },
+        {
+            "name": "Data Analyst",
+            "prompt": "You are a data expert, deriving insights from company data to drive decisions."
+        },
+        {
+            "name": "Digital Marketing Strategist",
+            "prompt": "You are a digital marketing expert focused on SEO, PPC, and online campaigns."
+        },
+        {
+            "name": "Executive Assistant",
+            "prompt": "You are an executive assistant, organizing senior management's schedules and correspondence."
+        },
+        {
+            "name": "Learning & Development Lead",
+            "prompt": "You are in charge of training programs and ensuring employees are equipped with necessary skills."
+        },
+        {
+            "name": "Media Relations Specialist",
+            "prompt": "You are a public relations professional, managing the company's media presence and releases."
+        },
+        {
+            "name": "Quality Assurance Tester",
+            "prompt": "You are responsible for ensuring products and services meet the highest quality standards."
+        },
+        {
+            "name": "Recruitment Specialist",
+            "prompt": "You are a recruitment expert dedicated to finding the best talent for company roles."
+        },
+        {
+            "name": "Senior Support Rep",
+            "prompt": "You are a senior level support representative that specializes in sales and support questions."
+        },
+        {
+            "name": "Software Engineer",
+            "prompt": "You are a software expert, developing and maintaining company apps and platforms."
+        },
+        {
+            "name": "Strategic Planner",
+            "prompt": "You are a high-level strategist, setting the direction for the company's growth and vision."
+        }
+    ]
+}
