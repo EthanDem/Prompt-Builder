@@ -51,7 +51,7 @@ Ok, that is the base instructions, now follow these details and create an output
 USER PROMPT= '''
 
 if st.button("Generate Prompt"):
-    updated_text = original_text.reaplce("[COMPANY/PERSON NAME]", company_name)
+    updated_text = original_text.replace("[COMPANY/PERSON NAME]", company_name)
     updated_text = original_text.replace("[EXPERT DETAILS]", expert_details)
     updated_text = updated_text.replace("[NEEDED OUTPUT]", needed_output)
     updated_text = updated_text.replace("[WRITING STYLE]", writing_style)
