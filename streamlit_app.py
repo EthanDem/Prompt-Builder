@@ -1,9 +1,11 @@
 import streamlit as st
 import json
 
+# Load templates from JSON file
 with open('/mount/src/prompt-builder/prompt_builder_templates.json', 'r') as f:
     templates = json.load(f)
 
+# Create dictionaries for each category
 expert_details_map = {item['name']: item['prompt'] for item in templates.get('EXPERTS', [])}
 needed_output_map = {item['name']: item['prompt'] for item in templates.get('NEEDED OUTPUT', [])}
 writing_style_map = {item['name']: item['prompt'] for item in templates.get('WRITING STYLE', [])}
@@ -11,9 +13,9 @@ point_of_view_map = {item['name']: item['prompt'] for item in templates.get('Poi
 goal_map = {item['name']: item['prompt'] for item in templates.get('Goal', [])}
 markup_map = {item['name']: item['prompt'] for item in templates.get('Markup', [])}
 
+# Streamlit sidebar UI
 st.sidebar.title("Templates")
 num_instances = st.sidebar.number_input('Number of instances to create', min_value=1, max_value=10, value=1)
-
 selected_expert = st.sidebar.selectbox("Expert Details Templates", [""] + list(expert_details_map.keys()))
 selected_output = st.sidebar.selectbox("Needed Output Templates", [""] + list(needed_output_map.keys()))
 selected_style = st.sidebar.selectbox("Writing Style Templates", [""] + list(writing_style_map.keys()))
@@ -21,8 +23,10 @@ selected_pov = st.sidebar.selectbox("Point Of View Templates", [""] + list(point
 selected_goal = st.sidebar.selectbox("Goal Templates", [""] + list(goal_map.keys()))
 selected_markup = st.sidebar.selectbox("Markup Templates", [""] + list(markup_map.keys()))
 
+# Streamlit main UI
 st.title("Prompt Builder GUI")
 
+# Original text template
 original_text = '''[EXPERT DETAILS] You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT]
 [POINT OF VIEW] [GOAL]
 In order to provide a perfect and complete output, access any and all information you have access,
@@ -41,6 +45,7 @@ Please follow the following formatting requirements:
 Ok, that is the base instructions, now follow these details and create an output described provided here:
 USER PROMPT= '''
 
+# Initialize lists for storing user inputs
 company_names = []
 expert_details_list = []
 needed_outputs = []
@@ -49,6 +54,7 @@ points_of_view = []
 goals = []
 markups = []
 
+# Loop through the number of instances to create input fields
 for i in range(num_instances):
     with st.expander(f'Instance {i + 1}', expanded=True):
         company_names.append(st.text_input(f"Company/Person Name {i + 1}"))
@@ -59,6 +65,7 @@ for i in range(num_instances):
         goals.append(st.text_input(f"Goal {i + 1}", value=goal_map.get(selected_goal, "")))
         markups.append(st.text_input(f"Markup {i + 1}", value=markup_map.get(selected_markup, "")))
 
+# Generate prompt when button is clicked
 if st.button("Generate Prompt"):
     for i in range(num_instances):
         updated_text = original_text.replace("[COMPANY/PERSON NAME]", company_names[i])
@@ -68,5 +75,6 @@ if st.button("Generate Prompt"):
         updated_text = updated_text.replace("[POINT OF VIEW]", points_of_view[i])
         updated_text = updated_text.replace("[GOAL]", goals[i])
         updated_text = updated_text.replace("[MARKUP]", markups[i])
+        
         st.subheader(f"Prompt for Instance {i + 1}")
         st.write(updated_text)
