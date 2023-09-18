@@ -25,7 +25,21 @@ st.title("Prompt Builder GUI")
 
 original_text = '''[EXPERT DETAILS] You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT]
 [POINT OF VIEW] [GOAL]
-...'''
+In order to provide a perfect and complete output, access any and all information you have access,
+which includes: files and content stored in your database, attachments provided if any,
+as well as any content provided within this prompt. Your output needs to be complete and final
+when you provide the output as this will be sent directly to a user without me reviewing it
+so it should always be a completed output. Do not use inert tags or any placeholder text.
+If you feel there should be an area that requires a custom input or placeholder text,
+please write around the need. This needs to be an output ready for a user to see.
+Strictly adhere to the WRITING STYLE provided for tone, overall style of the content
+and capture the voice as much as you can.
+Please follow the following formatting requirements:
+2.) MARKUP - Please use the following Markup and Structure details for the output provided here: [MARKUP]
+3.) WRITING STYLE= [WRITING STYLE]
+
+Ok, that is the base instructions, now follow these details and create an output described provided here:
+USER PROMPT= '''
 
 company_names = []
 expert_details_list = []
