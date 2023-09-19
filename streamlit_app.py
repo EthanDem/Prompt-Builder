@@ -27,13 +27,10 @@ selected_markup = st.sidebar.selectbox("Markup Templates", [""] + list(markup_ma
 st.title("Prompt Builder GUI")
 
 # Original text template
-original_text = '''Please analyze all details and instructions of this prompt and strictly adhere everything provided. You will will follow these instructions and do your best fulfilling the following QUESTION here: [USER PROMPT]
+original_text = '''Please analyze and strictly adhere to all of the the instructions in provided in this prompt. You will will follow these instructions and do your best fulfilling the following QUESTION here: [USER PROMPT]
+In order to provide a perfect and complete output, access any and all information you have access, which includes: files and content stored in your database, attachments provided if any, as well as any content provided within this prompt. Output Instructions: 
 
-In order to provide a perfect and complete output, access any and all information you have access, which includes: files and content stored in your database, attachments provided if any, as well as any content provided within this prompt.
-
-Output Instructions:
-
-1. You are to act as if you are the person or representitive described here when creating your output: [EXPERT DETAILS]
+1. You are to act as if you are the person or representitive described here when creating your output: [EXPERT DETAILS] 
 
 2. You should right in the following point gf view:[POINT OF VIEW]
 
