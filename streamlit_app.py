@@ -27,6 +27,7 @@ selected_point_of_view = st.sidebar.selectbox("Point of View", [""] + list(point
 st.title("Prompt Builder GUI")
 
 # Lists to hold input values
+company_names = []
 act_as_list = []
 create_following_list = []
 writing_styles = []
@@ -38,6 +39,7 @@ user_prompts = []
 # Collect inputs for each instance
 for i in range(num_instances):
     with st.expander(f'Instance {i + 1}', expanded=True):
+        company_names.append(st.text_input(f"Company/Person Name {i + 1}"))
         act_as_list.append(st.text_input(f"Act as if you are a... {i + 1}", value=act_as_map.get(selected_act_as, "")))
         create_following_list.append(st.text_input(f"You are creating the following... {i + 1}", value=create_following_map.get(selected_create_following, "")))
         writing_styles.append(st.text_input(f"Writing Style {i + 1}", value=writing_style_map.get(selected_style, "")))
@@ -49,16 +51,27 @@ for i in range(num_instances):
 # Generate prompt action
 if st.button("Generate Prompt"):
     for i in range(num_instances):
-        # You can customize this text template based on your specific needs
-        original_text = '''Please analyze and strictly adhere to all of the instructions provided in this prompt. You will follow these instructions and do your best fulfilling the following QUESTION here: [USER PROMPT]
-        1. [ACT AS IF YOU ARE A...]
-        2. [YOU ARE CREATING THE FOLLOWING...]
-        3. [WRITING STYLE]
-        4. [FORMAT AND STRUCTURE]
-        5. [THE GOAL FOR THE AUDIENCE IS]
-        6. [POINT OF VIEW]
-        '''
+        original_text = '''Please analyze and strictly adhere to all of the the instructions in provided in this prompt. You will will follow these instructions and do your best fulfilling the following QUESTION here: [USER PROMPT]
+In order to provide a perfect and complete output, access any and all information you have access, which includes: files and content stored in your database, attachments provided if any, as well as any content provided within this prompt. Output Instructions: 
+
+1. You are to act as if you are the person or representative described here when creating your output: [ACT AS IF YOU ARE A...]
+
+2. You are producing this content on behalf of: [Company/Person Name]
+
+3. You are tasked to create the following: [YOU ARE CREATING THE FOLLOWING...]
+
+4. You should write in the following point of view:[POINT OF VIEW]
+
+5. Your primary goal with this task is:  [THE GOAL FOR THE AUDIENCE IS]
+
+6. Strictly adhere to the following WRITING STYLE: [WRITING STYLE]
+
+7. Your output should contain the following formatting and Structure details: [FORMAT AND STRUCTURE]
+
+Please provide your output for the QUESTION provided above while strictly adhering to the instructions contained within this prompt.'''
+        
         updated_text = original_text
+        updated_text = updated_text.replace("[Company/Person Name]", company_names[i])
         updated_text = updated_text.replace("[ACT AS IF YOU ARE A...]", act_as_list[i])
         updated_text = updated_text.replace("[YOU ARE CREATING THE FOLLOWING...]", create_following_list[i])
         updated_text = updated_text.replace("[WRITING STYLE]", writing_styles[i])
@@ -66,5 +79,6 @@ if st.button("Generate Prompt"):
         updated_text = updated_text.replace("[THE GOAL FOR THE AUDIENCE IS]", goal_audiences[i])
         updated_text = updated_text.replace("[POINT OF VIEW]", points_of_view[i])
         updated_text = updated_text.replace("[USER PROMPT]", user_prompts[i])
+        
         st.subheader(f"Prompt for Instance {i + 1}")
         st.write(updated_text)
