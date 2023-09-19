@@ -51,12 +51,12 @@ if st.button("Generate Prompt"):
     for i in range(num_instances):
         # You can customize this text template based on your specific needs
         original_text = '''Please analyze and strictly adhere to all of the instructions provided in this prompt. You will follow these instructions and do your best fulfilling the following QUESTION here: [USER PROMPT]
-        1. Act as if you are a...: [ACT AS IF YOU ARE A...]
-        2. You are creating the following...: [YOU ARE CREATING THE FOLLOWING...]
-        3. Writing Style: [WRITING STYLE]
-        4. Format and Structure: [FORMAT AND STRUCTURE]
-        5. The goal for the audience is: [THE GOAL FOR THE AUDIENCE IS]
-        6. Point of View: [POINT OF VIEW]
+        1. [ACT AS IF YOU ARE A...]
+        2. [YOU ARE CREATING THE FOLLOWING...]
+        3. [WRITING STYLE]
+        4. [FORMAT AND STRUCTURE]
+        5. [THE GOAL FOR THE AUDIENCE IS]
+        6. [POINT OF VIEW]
         '''
         updated_text = original_text
         updated_text = updated_text.replace("[ACT AS IF YOU ARE A...]", act_as_list[i])
