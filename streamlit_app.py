@@ -2,7 +2,7 @@ import streamlit as st
 import json
 
 # Load templates from JSON file
-with open('/mount/src/prompt-builder/updated_prompt_builder_templates.json', 'r') as f:
+with open('/mount/src/prompt-builder/final_updated_prompt_builder_templates.json', 'r') as f:
     templates = json.load(f)
 
 # Create maps for each template category
