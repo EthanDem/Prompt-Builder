@@ -27,23 +27,26 @@ selected_markup = st.sidebar.selectbox("Markup Templates", [""] + list(markup_ma
 st.title("Prompt Builder GUI")
 
 # Original text template
-original_text = '''[EXPERT DETAILS] You have been hired by [COMPANY/PERSON NAME] to [NEEDED OUTPUT]
-[POINT OF VIEW] [GOAL]
-In order to provide a perfect and complete output, access any and all information you have access,
-which includes: files and content stored in your database, attachments provided if any,
-as well as any content provided within this prompt. Your output needs to be complete and final
-when you provide the output as this will be sent directly to a user without me reviewing it
-so it should always be a completed output. Do not use inert tags or any placeholder text.
-If you feel there should be an area that requires a custom input or placeholder text,
-please write around the need. This needs to be an output ready for a user to see.
-Strictly adhere to the WRITING STYLE provided for tone, overall style of the content
-and capture the voice as much as you can.
-Please follow the following formatting requirements:
-2.) MARKUP - Please use the following Markup and Structure details for the output provided here: [MARKUP]
-3.) WRITING STYLE= [WRITING STYLE]
+original_text = '''Please analyze all details and instructions of this prompt and strictly adhere everything provided. You will will follow these instructions and do your best fulfilling the following QUESTION here: [USER PROMPT]
 
-Ok, that is the base instructions, now follow these details and create an output described provided here:
-USER PROMPT= '''
+In order to provide a perfect and complete output, access any and all information you have access, which includes: files and content stored in your database, attachments provided if any, as well as any content provided within this prompt.
+
+Output Instructions:
+
+1. You are to act as if you are the person or representitive described here when creating your output: [EXPERT DETAILS]
+
+2. You should right in the following point gf view:[POINT OF VIEW]
+
+3. Your primary goal with this task is:  [GOAL]
+
+4. Strictly adhere to the following WRITING STYLE: [WRITING STYLE]
+
+5. Your output needs to be complete and final when you provide the output as this will be sent directly to a user without me reviewing it
+so it should always be a completed output. Do not use inert tags or any placeholder text. If you feel there should be an area that requires a custom input or placeholder text, please write around the need. This needs to be an output ready for a user to see.
+
+6. Your output should contain the following formatting and Structure details: [MARKUP]
+
+Please provide your output for the QUESTION provided above while strictly adhering to the instructions contained within this prompt. '''
 
 # Lists to hold input values
 company_names = []
@@ -77,6 +80,6 @@ if st.button("Generate Prompt"):
         updated_text = updated_text.replace("[POINT OF VIEW]", points_of_view[i])
         updated_text = updated_text.replace("[GOAL]", goals[i])
         updated_text = updated_text.replace("[MARKUP]", markups[i])
-        updated_text = updated_text.replace("USER PROMPT=", f"USER PROMPT= {user_prompts[i]}")  # Replace USER PROMPT placeholder
+        updated_text = updated_text.replace("[USER PROMPT]", f"{user_prompts[i]}")  # Replace USER PROMPT placeholder
         st.subheader(f"Prompt for Instance {i + 1}")
         st.write(updated_text)
