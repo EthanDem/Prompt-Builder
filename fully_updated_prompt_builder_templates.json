@@ -101,76 +101,7 @@
             "Prompt": "Social Media Influencer: Write with the flair and charisma of a social media influencer. Be engaging, use current lingo, and aim to captivate and inspire the audience."
         }
     ],
-    "Format and Structure": [
-        {
-            "Name": "Article / Blog",
-            "Prompt": "Structure your response as an article. Start with a compelling headline, followed by a brief introduction. Break the content into subheadings and paragraphs for easy readability. Conclude with a summary or call to action. Ensure cohesive flow and relevance.\""
-        },
-        {
-            "Name": "Customer/Prospect Email Reply",
-            "Prompt": "Format this as an email reply. Begin with a courteous greeting addressing the recipient. Address the main points or queries raised in the original email. Maintain a concise and polite tone. Conclude with a sign-off and your name.\""
-        },
-        {
-            "Name": "Idea List",
-            "Prompt": "Present your response in a list format. Begin with a brief introduction or title for the list. Each idea should be itemized, preferably with bullet points. Ensure clarity and simplicity for each listed item.\""
-        },
-        {
-            "Name": "LinkedIn Update",
-            "Prompt": "Format this as a LinkedIn post. Start with a catchy lead sentence or question to engage the audience. Keep the content concise, professional, and relevant to a professional audience. Consider including a call to action or a relevant hashtag."
-        },
-        {
-            "Name": "Summary",
-            "Prompt": "Provide a concise summary. Start by highlighting the main points or themes. Ensure brevity while capturing the essence of the content. Conclude with any necessary recommendations or conclusions.\""
-        },
-        {
-            "Name": "Table/Structured",
-            "Prompt": "Organize your response in a table or structured format. Clearly define rows and columns, and label them appropriately. Ensure data is presented clearly and consistently. Add any necessary footnotes or legends for clarity.\""
-        },
-        {
-            "Name": "Tweet",
-            "Prompt": "Craft your response as a tweet. Keep it under 280 characters. Aim for clarity and engagement. Use relevant hashtags and mentions (@) where appropriate.\""
-        },
-        {
-            "Name": "Website Chat Response",
-            "Prompt": "Format this as a chat response. Keep it brief, friendly, and to the point. Ensure promptness in addressing the user's query. Use emojis sparingly for a personal touch, but maintain professionalism.\""
-        },
-        {
-            "Name": "Facebook Ad",
-            "Prompt": "Headline: Max 25 characters; Text: Max 125 characters; Link Description: Max 30 characters"
-        },
-        {
-            "Name": "Google Ads",
-            "Prompt": "Headline: Max 30 characters; Description Line 1: Max 15 characters"
-        },
-        {
-            "Name": "Instagram Ad",
-            "Prompt": "Caption: Max 2,200 characters, but first 125 are most important; Hashtags: Up to 30"
-        },
-        {
-            "Name": "LinkedIn Ad",
-            "Prompt": "Headline: Max 150 characters; Description: Max 600 characters"
-        },
-        {
-            "Name": "Pinterest",
-            "Prompt": "Description: Max 500 characters; Use high-quality images or infographics"
-        },
-        {
-            "Name": "Snapchat",
-            "Prompt": "Snap Ad: Up to 3 minutes, but 5-6 seconds recommended; Caption: As concise as possible"
-        },
-        {
-            "Name": "TikTok",
-            "Prompt": "Video: 15-60 seconds; Caption: Up to 150 characters"
-        },
-        {
-            "Name": "Twitter Ad",
-            "Prompt": "Tweet: Max 280 characters; Hashtags: Use 1-3 for best engagement"
-        },
-        {
-            "Name": "YouTube Video",
-            "Prompt": "Title: Max 100 characters; Description: Max 1,000 characters"
-        }
-    ],
+
     "The goal for the audience is": {
         "Brand Awareness": "Craft your content with the intent of increasing brand recognition. Highlight unique selling points, company values, and differentiators. ",
         "Convert / Engage": "Structure your content to drive the reader towards a cal to action and compel them to take action.  Use compelling call-to-actions that are relevant to the topic and other instructions. Ensure the surrounding content emphasizes its value.",
