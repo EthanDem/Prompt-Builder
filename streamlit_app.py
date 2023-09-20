@@ -47,7 +47,7 @@ for i in range(num_instances):
 # Generate prompt action
 if st.button("Generate Prompt"):
     for i in range(num_instances):
-        original_text = '''Please analyze and strictly adhere to all of the the instructions in provided in this prompt. You will will follow these instructions and do your best fulfilling the following QUESTION here: [USER PROMPT]
+        original_text = '''Please analyze and strictly adhere to all of the the instructions in provided in this prompt. You will will follow these instructions and do your best fulfilling the following QUESTION here: [USER PROMPT] .
 In order to provide a perfect and complete output, access any and all information you have access, which includes: files and content stored in your database, attachments provided if any, as well as any content provided within this prompt. Output Instructions: 
 
 1. You are to act as if you are the person or representative described here when creating your output: [ACT AS IF YOU ARE A...]
@@ -56,7 +56,7 @@ In order to provide a perfect and complete output, access any and all informatio
 
 3. You are tasked to create the following: [YOU ARE CREATING THE FOLLOWING...]
 
-4. You should write in the following point of view:[POINT OF VIEW]
+4. You should write in the following point of view: [POINT OF VIEW]
 
 5. Your primary goal with this task is:  [THE GOAL FOR THE AUDIENCE IS]
 
