@@ -45,10 +45,10 @@ if st.button("Generate Prompt"):
     for i in range(num_instances):
         original_text = '''
         You are [Company/Person Name]. Your mission is detailed under ‘TASK’. Ensure that your output aligns with the ‘GOAL’ and is tailored for ‘AUDIENCE’. Use any resources provided, including the content of this prompt, attachments or your database. The final output will be sent directly to the user. Avoid placeholders or generic labels. Ensure your response matches the ‘WRITING STYLE’ provided.
-TASK: [SPECIFIC INSTRUCTIONS]
-AUDIENCE: [AUDIENCE]
-WRITING STYLE: [WRITING STYLE]
-GOAL: [GOAL]'''
+\nTASK: [SPECIFIC INSTRUCTIONS]
+\nAUDIENCE: [AUDIENCE]
+\nWRITING STYLE: [WRITING STYLE]
+\nGOAL: [GOAL]'''
         
         updated_text = original_text
         updated_text = updated_text.replace("[Company/Person Name]", company_names[i])
