@@ -1,17 +1,15 @@
 import streamlit as st
 import json
 
-# Load templates from JSON file
-with open('/app/prompt-builder/fixed_fully_updated_prompt_builder_templates.json', 'r') as f:
+=with open('/app/prompt-builder/fixed_fully_updated_prompt_builder_templates.json', 'r') as f:
     templates = json.load(f)
 
-# Create maps for each template category
 specific_instructions_map = {item['Name']: item['Prompt'] for item in templates.get('SPECIFIC INSTRUCTIONS', [])}
 writing_style_map = {item['Name']: item['Prompt'] for item in templates.get('WRITING STYLE', [])}
 goal_map = {item['Name']: item['Prompt'] for item in templates.get('GOAL', [])}
 audience_map = {item['Name']: item['Prompt'] for item in templates.get('AUDIENCE', [])}
 
-# Sidebar UI
+
 st.sidebar.title("Templates")
 num_instances = st.sidebar.number_input('Number of instances to create', min_value=1, max_value=10, value=1)
 selected_specific_instructions = st.sidebar.selectbox("SPECIFIC INSTRUCTIONS", [""] + list(specific_instructions_map.keys()))
@@ -19,10 +17,9 @@ selected_writing_style = st.sidebar.selectbox("WRITING STYLE", [""] + list(writi
 selected_goal = st.sidebar.selectbox("GOAL", [""] + list(goal_map.keys()))
 selected_audience = st.sidebar.selectbox("AUDIENCE", [""] + list(audience_map.keys()))
 
-# Main UI
+
 st.title("Prompt Builder GUI")
 
-# Lists to hold input values
 company_names = []
 specific_instructions_list = []
 writing_styles = []
@@ -30,7 +27,6 @@ goals = []
 audiences = []
 user_prompts = []
 
-# Collect inputs for each instance
 for i in range(num_instances):
     with st.expander(f'Instance {i + 1}', expanded=True):
         company_names.append(st.text_input(f"Company/Person Name {i + 1}"))
@@ -40,7 +36,6 @@ for i in range(num_instances):
         audiences.append(st.text_input(f"AUDIENCE {i + 1}", value=audience_map.get(selected_audience, "")))
         user_prompts.append(st.text_input(f"User Prompt {i + 1}"))
 
-# Generate prompt action
 if st.button("Generate Prompt"):
     for i in range(num_instances):
         original_text = '''
