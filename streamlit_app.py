@@ -49,7 +49,7 @@ if st.button("Generate Prompt"):
 \nAUDIENCE: [AUDIENCE]
 \nWRITING STYLE: [WRITING STYLE]
 \nGOAL: [GOAL]
-\nUSER PROMPT: '''
+\nUSER PROMPT: [USER PROMPT]'''
         
         updated_text = original_text
         updated_text = updated_text.replace("[Company/Person Name]", company_names[i])
