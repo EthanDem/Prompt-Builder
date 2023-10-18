@@ -48,7 +48,8 @@ if st.button("Generate Prompt"):
 \nTASK: [SPECIFIC INSTRUCTIONS]
 \nAUDIENCE: [AUDIENCE]
 \nWRITING STYLE: [WRITING STYLE]
-\nGOAL: [GOAL]'''
+\nGOAL: [GOAL]
+\nUSER PROMPT: '''
         
         updated_text = original_text
         updated_text = updated_text.replace("[Company/Person Name]", company_names[i])
