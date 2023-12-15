@@ -1,7 +1,7 @@
 import streamlit as st
 import json
 
-with open('/app/prompt-builder/fixed_fully_updated_prompt_builder_templates.json', 'r') as f:
+with open('/mount/src/prompt-builder/fixed_fully_updated_prompt_builder_templates.json', 'r') as f:
     templates = json.load(f)
 
 specific_instructions_map = {item['Name']: item['Prompt'] for item in templates.get('SPECIFIC INSTRUCTIONS', [])}
